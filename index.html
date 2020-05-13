@@ -47,12 +47,39 @@
 		  	margin: 0px;
 		}
 
+		#button {
+			/* position: absolute; */
+			/* left: 20px; */
+			/* text-align: center; */
+			margin-top: 40px;
+			display: flex;
+			justify-content: center;
+		}
+
+		#button a, a:visited {
+            font-family: 'Palanquin', sans-serif; 
+			color: #ffff;
+            text-decoration: none;
+            text-align: center;
+            display: inline-block;
+            padding: 12px 40px;            
+            border-radius: 30px;
+            border-width: 2px;
+            background-color: #29beec;
+        }
+
+        #button a:hover, a:active {
+			color: #ffff;
+            text-decoration: none;
+            background-color: #296dec;
+        }
+
 		#map {
 		  position: absolute;
 		  top: 0;
 		  bottom: 0;
 		  width: 100%;
-		}
+		}		
 
 		.map-overlay {
 			position: absolute;
@@ -65,9 +92,11 @@
 			padding: 24px;
 		}
 
+
 		#features {
 		 	top: 0;
-		  	height: 690px;
+			 height: 80vh;
+		  	/* height: 720px; */
 		  	width: 25vw;
 		}
 
@@ -128,7 +157,8 @@
 </head>
 
 <body>
-    <div id='map'></div>
+	<div id='map'></div>
+	<!-- <div id='button'><a href="https://snoopeep.github.io/eqmap_mb0510/">Read the story</a></div> -->
     <div id='legend'></div>
 	<div class='map-overlay' id='features'>
 		<h1 style = "margin-top: 12px">Senior amenity access in NYC</h1>
@@ -239,6 +269,7 @@
 			</div>
 
 		</div>
+		<div id='button'><a href="https://snoopeep.github.io/eqmap_mb0510/">Read the Story</a></div>
 
 	</div>
 	<script>
