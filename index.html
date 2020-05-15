@@ -14,36 +14,50 @@
     	body {
 		 	margin: 0;
 		 	padding: 0;
-			font-family: 'Palanquin', sans-serif; 
+			color: #1b2031;
+		}
+
+		h1, h2, h3, h4 {
+			text-align: center;
+			font-weight: 100;
 		}
 
 		h1 {
 			font-size: 25px;
-			text-align: center;
-			margin: 0px;
+			margin-top: 12px;
+			/* background-color: #e5f877; */
 		}
 
 		h2 {
 		  	font-size: 10px;
-		  	text-align: center;
-		  	letter-spacing: 3px;
-		  	color: #666666;
+		  	letter-spacing: 1px;
 		  	margin: 5px;
 		  	text-transform: uppercase;
+			color: #616579;
+			/* background-color: aquamarine; */
 		}
 
 		h3 {
-		  	font-size: 18px;
-		  	text-align: center;
+		  	font-size: 20px;
+			line-height: 24px;
 		  	margin: 0px;
+			/* background-color: lightpink; */
+		}
 
+		h4 {
+			font-size: 36px;
+			line-height: 30px;
+			font-weight: 300;
+			color:royalblue;
+			margin-top: 25px;
+			margin-bottom: 5px;
 		}
 
 		p {
 		  	font-size: 11px;
-		  	font-weight: bold;
+		  	/* font-weight: bold; */
 		  	text-align: center;
-		  	color: #767676;
+		  	color: #616579;
 		  	margin: 0px;
 		}
 
@@ -53,23 +67,27 @@
 			display: inline-block;
 			vertical-align: middle;
 		}
+
 		small {
-			color: #666666;
+			color: #616579;
 			display: inline;
 			text-align: justify;
+			margin-bottom: 10px;
+			
 		}
 
-		#button {
+		.button {
 			/* position: absolute; */
 			/* left: 20px; */
 			/* text-align: center; */
-			margin-top: 40px;
+			margin-top: 25px;
+			margin-bottom: 5px;
 			display: flex;
 			justify-content: center;
 			font-size: 18px;
 		}
 
-		#button a, a:visited {
+		.button a, a:visited {
             font-family: 'Palanquin', sans-serif; 
 			color: #ffff;
             text-decoration: none;
@@ -81,7 +99,7 @@
             background-color: #29beec;
         }
 
-        #button a:hover, a:active {
+        .button a:hover, a:active {
 			color: #ffff;
             text-decoration: none;
             background-color: #296dec;
@@ -96,23 +114,24 @@
 
 		.map-overlay {
 			position: absolute;
-			right: 0;
 			background: rgba(255, 255, 255, 0.93);
+			box-shadow: 0 3px 10px rgba(49, 49, 49, 0.1);
 			/* font-family: 'Palanquin', sans-serif;  */
 			font-family: Arial, sans-serif;
 			overflow: auto;
 			border-radius: 20px;
-			margin: 32px;
-			padding: 24px;
 		}
 
 
 		#features {
-		 	top: 0;
-			 height: 80vh;
-		  	/* height: 720px; */
-		  	/* width: 25vw; */
-			width: 400px;  
+		 	top: 50%;
+			right: 0;
+			-ms-transform: translateY(-50%);
+  			transform: translateY(-50%);
+			height: auto;
+			width: 430px;
+			margin: 0 20px 0 auto;
+			padding: 20px 10px;  
 		}
 
 		#legend {
@@ -123,29 +142,28 @@
 			text-align: left;
 			line-height: 9px;
 			padding: 18px;
-			border-radius: 16px;
-			background: rgba(255, 255, 255, 0.93);
-			box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-			line-height: 18px;
-			/* height: auto; */
-			/* width: auto; */
-			margin-top: 40px;
-			margin-left: 40px;
+			margin-top: 20px;
+			margin-left: 20px;
+		}
+
+		#legendgrid {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 10px;
+			margin-bottom: 15px;
+			/* background-color: lightpink; */
+		}
+
+		#legendgrid > div {
+			text-align: center;
+			margin: 0 5px;
 		}
 
 		.legendgradient {
 			background: linear-gradient(90deg, #2d81b9, #33b7d1, #6dd5bc, #8ef09b, #e5f877);
 			height: 8px;
-			width: 130px;
-			padding: 0px, 5px, 12px, 5px;
-			margin-bottom: 10px;
-			margin-left: 0px;
-		}
-
-		.legendgrid {
-			display: grid;
-  			grid-template-columns: auto auto;
-  			grid-gap: 90px;
+			width: 100px;
 		}
 
 		.legend-key {
@@ -158,6 +176,20 @@
 			margin: 4px 10px 4px 0px;
 		}
 
+		.section{
+			margin-top: 28px;
+			margin-bottom: 16px;
+			text-align: center;
+			/* vertical-align: middle; */
+		}
+
+		.icon{ 
+			width: 32px;
+			height: 32px;
+		}
+
+		.nodata{}
+
 		.grid-score-pop {
   			display: grid;
   			grid-template-columns: auto auto;
@@ -166,26 +198,22 @@
 		}
 
 		.grid-fac {
-  			display: grid;
-  			grid-template-columns: auto auto auto auto auto;
-  			grid-gap: 10px;
- 			padding: 10px;
-
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin: 10px 0;
+			/* background: lemonchiffon; */
  		}
 
-		.div{
-			margin-top: 28px;
-			margin-bottom: 16px;
-			/* vertical-align: middle; */
+		.grid-fac > div {
+			width: 80px;
+			/* height: px; */
+			margin-bottom: 20px;
+			text-align: center;
+			/* background: silver; */
 		}
-
-		.icon{ 
-			width: 32px;
-			height: 32px;
-			margin-left: 45%;
-		}
-
-		.nodata{}
+		
 
     </style>
 
@@ -194,125 +222,99 @@
 <body>
 	<div id='map'></div>
 	<!-- <div id='button'><a href="https://snoopeep.github.io/eqmap_mb0510/">Read the story</a></div> -->
-    <div id='legend'>
-		<small>Amenity Acess Score</small>
-		<div class="legendgrid">
-			<small>0</small>
-			<small>10</small>
+    <div class='map-overlay' id='legend'>
+		<div><small>Amenity Acess Score</small></div>
+		<div id="legendgrid">
+			<div><small>0</small></div>
+			<div class="legendgradient"></div>
+			<div><small>10</small></div>
 		</div>
-		<div class="legendgradient"></div>
 	</div>
 	<div class='map-overlay' id='features'>
-		<h1 style = "margin-top: 12px">Senior amenity access in NYC</h1>
-
-		<div class="div">
-			<h2  id='boro' class='nodata'>BOROUGH</h2>
-			<h3 id='neighborhood' class='nodata'>Click on a census tract!</h3>
+		<h1>Senior Amenity Access in NYC</h1>
+		<div class="section" id='sec-boro'>
+			<h2 class='nodata' id='boro' >BOROUGH</h2>
+			<h3 class='nodata' id='neighborhood'>Click on a colored census tract!</h3>
 		</div>
-
-		<div class="div">
+		<div class="section" id='sec-score'>
 			<img src="img/icon-sco.png" class= 'icon'>
 			<h2>SCORING</h2>
-
-			<div style="margin-top: 10px">
-				<h1 id='access_score' class='nodata'>-</h1>
+			<div>
+				<h4 class='nodata' id='access_score'>-</h4>
 				<p>Amenity Access Score</p>
-			</div>
-						
+			</div>		
 			<div class="grid-score-pop">
 			  <div>
-			  	<h3 id='walk_score' class='nodata'>-</h3>
+			  	<h3 class='nodata' id='walk_score'>-</h3>
 				<p>Walk Score</p>
-			  </div>
-			  
+			  </div> 
 			  <div>
-			  	<h3 id='fac_score' class='nodata'>-</h3>
+			  	<h3 class='nodata' id='fac_score'>-</h3>
 				<p>Amenity Score</p>
 			  </div>
-
 			</div>
-
 		</div>
-
-		<div class="div">
+		<div class="section" id='sec-pop'>
 			<img src="img/icon-pop.png" class= 'icon'>
 			<h2>POPULATION</h2>
-
 			<div class="grid-score-pop">
 			  <div>
-			  	<h3 id='n_res' class='nodata'>-</h3>
-				<p>Total N. residents</p>
+			  	<h3 class='nodata'  id='n_res'>-</h3>
+				<p>Total N. Residents</p>
 			  </div>
-			  
 			  <div>
-			  	<h3 id='n_senior' class='nodata'>-</h3>
-				<p>N. seniors>65</p>
+			  	<h3 class='nodata' id='n_senior'>-</h3>
+				<p>N. Seniors>65</p>
 			  </div>
-
 			</div>
-
 		</div>
-
-		<div class="div">
+		<div class="section" id='sec-fac'>
 			<img src="img/icon-fac.png" class= 'icon'>
 			<h2>AMENITIES</h2>
-
 			<div class="grid-fac">
 			  	<div>
-			  		<h3 id='fac_art' class='nodata'>-</h3>
-					<p>Arts & entertainment</p>
+			  		<h3 class='nodata' id='fac_art' >-</h3>
+					<p>Arts & Entertainment</p>
 			  	</div>
-			  
 			  	<div>
-			  		<h3 id='fac_bank' class='nodata'>-</h3>
+			  		<h3 class='nodata' id='fac_bank'>-</h3>
 					<p>Banks</p>
 			 	 </div>
-
 				<div>
-			  		<h3 id='fac_eat' class='nodata'>-</h3>
+			  		<h3 class='nodata' id='fac_eat'>-</h3>
 					<p>Restaurants</p>
 			  	</div>
-
 			  	<div>
-			  		<h3 id='fac_mkt' class='nodata'>-</h3>
+			  		<h3 class='nodata' id='fac_mkt'>-</h3>
 					<p>Groceries</p>
 			  	</div>
-
 			  	<div>
-			  		<h3 id='fac_lib' class='nodata'>-</h3>
+			  		<h3 class='nodata' id='fac_lib'>-</h3>
 					<p>Libraries</p>
 			  	</div>
-
 			  	<div>
-			  		<h3 id='fac_med' class='nodata'>-</h3>
-					<p>Medical centers</p>
+			  		<h3 class='nodata' id='fac_med'>-</h3>
+					<p>Medical Centers</p>
 			  	</div>
-
 			  	<div>
-			  		<h3 id='fac_park' class='nodata'>-</h3>
+			  		<h3 class='nodata' id='fac_park'>-</h3>
 					<p>Parks</p>
 			  	</div>
-
 			  	<div>
-			  		<h3 id='fac_pharma' class='nodata'>-</h3>
+			  		<h3 class='nodata' id='fac_pharma'>-</h3>
 					<p>Pharmacies</p>
 			  	</div>
-
 			  	<div>
-			  		<h3 id='fac_poff' class='nodata'>-</h3>
-					<p>Post offices</p>
+			  		<h3 class='nodata' id='fac_poff'>-</h3>
+					<p>Post Offices</p>
 			  	</div>
-
 			  	<div>
-			  		<h3 id='fac_salon' class='nodata'>-</h3>
-					<p>Hair salons</p>
+			  		<h3 class='nodata' id='fac_salon'>-</h3>
+					<p>Hair Salons</p>
 			  	</div>
-
 			</div>
-
 		</div>
-		<div id='button'><a href="https://snoopeep.github.io/eqmap_mb0510/">Read the Story</a></div>
-
+		<div class='button'><a href="https://snoopeep.github.io/eqmap_mb0510/">Read the Story</a></div>
 	</div>
 	<script>
 		mapboxgl.accessToken = 'pk.eyJ1IjoidmVyb25pYTA4MjQiLCJhIjoiY2ozNzdxbDBlMDAzMjJ3bXBiNWl1N2lsbCJ9.YGHpnvqbrPYoNRaRFehv3g';
@@ -326,7 +328,7 @@
 
 		map.on('load', function() {
 		
-			var layers = ['Arts & entertainment', 'Banks', 'Restaurants', 'Groceries', 'Libraries', 'Medical centers', 'Parks', 'Pharmacies', 'Post offices', 'Hair salons'];
+			var layers = ['Arts & Entertainment', 'Banks', 'Restaurants', 'Groceries', 'Libraries', 'Medical Centers', 'Parks', 'Pharmacies', 'Post Offices', 'Hair Salons'];
 			var colors = ['#ac78e8', '#8ab8ef', '#f9b177', '#f56192', '#ef89fb', '#4b5be7', '#209d5c', '#32cffb', '#3b84de', '#acf2dc'];
 	  		
 			for (i = 0; i < layers.length; i++) {
